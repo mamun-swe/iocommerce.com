@@ -1,0 +1,43 @@
+@import "../../../App.scss";
+
+.order-index {
+    .table {
+        thead {
+            tr {
+                td {
+                    color: #000;
+                    font-size: 13px;
+                    font-weight: 600;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #dfdfdf;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    color: #000;
+                    font-size: 13px;
+                    font-weight: 400;
+                    padding-bottom: 10px;
+                    text-transform: capitalize;
+                    border-bottom: 1px solid #dfdfdf;
+
+                    .btn {
+                        color: $primary;
+                        font-size: 13px;
+                        font-weight: 600;
+                        margin-top: 5px;
+                        background: #dfdfdf46;
+                    }
+                }
+
+                .custom-py {
+                    padding-top: 12px !important;
+                    padding-bottom: 12px !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.core-services {
+    img {
+        height: 80px;
+
+        @media (max-width: 992px) {
+            height: 50px;
+        }
+    }
+
+    h5 {
+        font-weight: 600;
+
+        @media (max-width: 992px) {
+            font-size: 16px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.6rem;
+    }
+}

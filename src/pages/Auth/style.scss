@@ -1,0 +1,87 @@
+@import "../../App.scss";
+
+.Auth {
+    width: 100%;
+    height: 100vh;
+    background: #dfdfdf75;
+
+    .logo-box {
+        margin-bottom: 30px;
+
+        img {
+            height: 50px;
+        }
+
+        @media (max-width: 576px) {
+            width: 92vw;
+        }
+
+        @media (min-width: 576px) {
+            width: 450px;
+        }
+    }
+
+    .card {
+        overflow: hidden;
+        border-radius: 6px;
+
+        .card-header {
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            h4 {
+                font-weight: 700;
+            }
+        }
+
+        .card-body {
+            padding-bottom: 40px;
+
+            .form-control {
+                height: 42px;
+                font-size: 14px;
+            }
+
+            .form-control:focus {
+                border: 1px solid #dfdfdf;
+            }
+
+            .error {
+                border: 1px solid $primary !important;
+            }
+
+            .btn {
+                height: 42px;
+                color: #fff;
+                font-size: 15px;
+                font-weight: 700;
+                background: $primary;
+            }
+
+            p {
+                font-size: 15px;
+                margin-bottom: 0;
+
+                a {
+                    color: $primary;
+                }
+            }
+
+            .title {
+                color: #000;
+                font-size: 14px;
+                font-weight: 600;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            width: 92vw;
+        }
+
+        @media (min-width: 576px) {
+            width: 450px;
+        }
+    }
+}

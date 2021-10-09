@@ -1,0 +1,47 @@
+.custom-product-modal {
+    .modal-content {
+        .modal-body {
+            .large-image-container {
+                max-height: 300px;
+                overflow: hidden;
+
+                img {
+                    max-height: 300px;
+                    margin: auto;
+                }
+            }
+
+            .small-images-container {
+                margin: auto;
+
+                ul {
+                    li {
+                        float: left;
+                        list-style: none;
+                        margin-right: 5px;
+
+                        .small-image-container {
+                            width: 60px;
+                            height: 60px;
+                            overflow: hidden;
+                            cursor: pointer;
+
+                            img {
+                                max-width: 60px;
+                                max-height: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn-add-cart {
+                color: #fff;
+                font-size: 14px;
+                font-weight: 600;
+                background: #fc5d35;
+                padding: 10px 35px;
+            }
+        }
+    }
+}

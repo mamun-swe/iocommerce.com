@@ -1,0 +1,60 @@
+@import "../../../App.scss";
+
+.account-master {
+    // Mobile Page Links
+    .page-links-in-button-mobile {
+        text-align: center;
+
+        .btn {
+            margin: 5px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+        .is-Active {
+            color: #fff;
+            background: $primary;
+        }
+    }
+
+    // Side Menu
+    .side-menu {
+        min-width: 270px !important;
+        padding-top: 50px;
+
+        a,
+        .btn {
+            font-size: 13px;
+            display: block;
+            color: #555;
+            transition: 0.4s all;
+            text-transform: uppercase;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-decoration: none;
+            border-bottom: 1px solid #dfdfdf;
+            padding-left: 0;
+
+            @media (max-width: 992px) {
+                padding-left: 15px;
+            }
+        }
+
+        a:hover {
+            color: $primary;
+        }
+
+        .is-Active {
+            color: $primary;
+        }
+
+        .btn {
+            text-align: left;
+        }
+
+        .btn:hover {
+            color: $primary;
+        }
+    }
+}

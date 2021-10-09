@@ -1,0 +1,54 @@
+@import "../../App.scss";
+
+.about {
+    // Header
+    .header {
+        .content {
+            h2 {
+                color: #000;
+                font-weight: 700;
+                margin-bottom: 0;
+
+                span {
+                    color: $primary;
+                }
+
+                @media (min-width: 992px) {
+                    font-size: 50px;
+                }
+            }
+
+            @media (min-width: 992px) {
+                padding-top: 120px;
+            }
+        }
+
+        .image-column {
+            img {
+                width: 230px;
+
+                @media (min-width: 576px) {
+                    width: 330px;
+                }
+            }
+        }
+    }
+
+    // Content
+    .content {
+        // padding-top: 40px;
+        padding-bottom: 40px;
+
+        h3 {
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.8rem;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+}
