@@ -7,6 +7,7 @@ import Product from './Product'
 import Auth from './Auth'
 import Account from './Account'
 import Order from './Order'
+import Review from './Review'
 
 const Requests = {
     Home,
@@ -16,7 +17,8 @@ const Requests = {
     Product,
     Auth,
     Account,
-    Order
+    Order,
+    Review
 }
 
 export default Requests

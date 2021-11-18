@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import './style.scss'
+import ReactPlayer from 'react-player/youtube'
+import HtmlParser from 'react-html-parser'
+import Modal from 'react-bootstrap/Modal'
 import { Icon } from 'react-icons-kit'
 import { ic_close } from 'react-icons-kit/md'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../redux/Actions/cartAction'
-import ReactPlayer from 'react-player/youtube'
-import HtmlParser from 'react-html-parser'
-import Modal from 'react-bootstrap/Modal'
+import { Reviews, ReviewForm } from '../review'
+
 
 export const ProductModal = (props) => {
     const dispatch = useDispatch()
@@ -122,6 +124,13 @@ export const ProductModal = (props) => {
                                 }
                             </div>
 
+                            {/* Product reviews */}
+                            <div className="col-12 mt-4">
+                                <Reviews data={props.data} />
+                                <ReviewForm data={props.data} />
+                            </div>
+
+                            {/* Product video */}
                             <div className="col-12 mt-4">
                                 {props.data.video ?
                                     <div className="w-100">
