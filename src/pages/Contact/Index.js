@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './style.scss'
+import { toast, Slide } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { Icon } from 'react-icons-kit'
 import { useForm } from 'react-hook-form'
 import { Images } from '../../utils/Images'
@@ -7,14 +9,39 @@ import { ic_phone, ic_markunread, ic_location_on } from 'react-icons-kit/md'
 
 import Navbar from '../../components/NavBar/Index'
 import Footer from '../../components/Footer/Index'
+import Requests from '../../utils/Requests/Index'
+
+toast.configure({
+    autoClose: 2000,
+    transition: Slide,
+    position: "top-left",
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined
+})
 
 const Index = () => {
     const { register, handleSubmit, errors } = useForm()
     const [isLoading, setLoading] = useState(false)
 
     const onSubmit = async (data) => {
-        setLoading(true)
-        console.log(data)
+        try {
+            setLoading(true)
+            const response = await Requests.Mailer.SentMail(data)
+            console.log(response)
+            if (response.status === 201) {
+                toast.success(response.data.message)
+            }
+
+        } catch (error) {
+            if (error) {
+                setLoading(false)
+                toast.error("Somthing going wrong.")
+                console.log(error.response)
+            }
+        }
     }
 
     return (
@@ -171,7 +198,7 @@ const Index = () => {
                                             </div>
 
                                             <div className="col-12">
-                                                <button type="submit" className="btn text-white shadow-none">
+                                                <button type="submit" className="btn text-white shadow-none" disabled={isLoading}>
                                                     {isLoading ? <span>Sending...</span> : <span>Send Message</span>}
                                                 </button>
                                             </div>
